@@ -34,8 +34,6 @@ script#procTmp(type='text/html')
             li
               i.glyphicon.glyphicon-ban-circle(data-toggle='tooltip', data-placement!='<%= index == 0 ? "bottom" : "top" %>', title='Stop')
             != '<% } %>'
-            li
-              i.glyphicon.glyphicon-trash(data-toggle='tooltip', data-placement!='<%= index == 0 ? "bottom" : "top" %>', title='Delete')
           | <% } %>
       ul.proc-content
         li.proc-file!= '<%- (proc.pm2_env.pm_exec_path.length > 35 ? "...":"") + proc.pm2_env.pm_exec_path.slice(-35) %>'

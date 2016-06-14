@@ -219,9 +219,6 @@ function renderFanavi() {
   }, {
     icon: 'img/save.png',
     title: 'Save All'
-  }, {
-    icon: 'img/delete.png',
-    title: 'Delete All'
   }];
 
   d3.menu('#procs_action')
@@ -242,7 +239,7 @@ function renderFanavi() {
     })
     .load(icons)
     .on('click', function(index, data) {
-      sockets.sys.emit('action', ['restart', 'stop', 'save', 'delete'][index], 'all');
+      sockets.sys.emit('action', ['restart', 'stop', 'save'][index], 'all');
     });
 }
 
